@@ -2,9 +2,10 @@
 
 ## Project Overview: Predicting MLB attendence for 2019
 
-### Data Clean Up - Rodger
+### Data Clean Up - Roger
     * MySQL
     ** Data cleaning / munging
+    * Data conversion and translation tables
 ### Data Visualization / Dashboards - Brittany & Elliott
     * Leaflet JS
     * Plotly
