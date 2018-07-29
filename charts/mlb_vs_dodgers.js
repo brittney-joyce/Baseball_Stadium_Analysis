@@ -19,6 +19,7 @@ var trace1 = {
 31.9	,
 41.13
 ],
+  name: 'Average Dodgers Ticket Price ($)',
   type: "bar"
 };
 
@@ -44,13 +45,16 @@ var trace2 = {
 31	,
 32.44
 ],
+  name: 'Average MLB Ticket Price ($)',
   type: "bar"
 };
 
 var data = [trace1, trace2];
 
 var layout = {
-  title: "Dodgers Ticket Prices vs Overall MLB Average Price"
+  title: "Dodgers Ticket Prices vs Overall MLB Average Price",
+  yaxis: {title: 'Ticket Price ($)'},
+  xaxis: {title: 'Year'},
 };
 
 Plotly.newPlot("plot", data, layout);

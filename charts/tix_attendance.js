@@ -19,7 +19,7 @@ var trace1 = {
 31.9	,
 41.13
 ],
-  name: 'yaxis data',
+  name: 'Average Ticket Price',
   type: "bar"
 };
 
@@ -46,7 +46,7 @@ var trace2 = {
 46492
 
 ],
-  name: 'yaxis2 data',
+  name: 'Average Attendance',
   yaxis: 'y2',
   type: "line"
 };

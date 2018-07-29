@@ -25,7 +25,7 @@ var stadiums = [
   {team:"Baltimore Orioles",address:"333 W. Camden Street, Baltimore, MD. 21201",location: [39.285243,-76.620103], price: "29.95" ,record:"75-82", img:'orioles'},
   {team:"Boston Red Sox",address:"4 Yawkey Way, Boston, MA 02215",location: [42.346613,-71.098817], price: "56.97" ,record:"93-69", img:'redsox'},
   {team:"Chicago Cubs",address:"1060 Addison Street, Chicago, IL 60616",location: [41.947201,-87.656413], price: "58.57" ,record:"92-70", img:'cubs'},
-  {team:"Chicago White Sox",address:"333 W. 35th Street, Chicago, IL 60616",location: [41.830883,-87.635083], price: "26.73" ,record:"67-95", img:'whitsox'},
+  {team:"Chicago White Sox",address:"333 W. 35th Street, Chicago, IL 60616",location: [41.830883,-87.635083], price: "26.73" ,record:"67-95", img:'whitesox'},
   {team:"Cincinnati Reds",address:"100 Cinergy Field, Cincinnati, OH 45202",location: [39.107183,-84.507713], price: "21.14" ,record:"68-94", img:'reds'},
   {team:"Cleveland Indians",address:"2401 Ontario Street, Cleveland, OH 44115",location: [41.495149,-81.68709], price: "30.04" ,record:"102-60", img:'indians'},
   {team:"Colorado Rockies",address:"Coors Field, 2001 Blake Street, Denver, CO 80205-2000",location: [39.75698,-104.965329], price: "26.02" ,record:"87-75",img:'rockies' },
