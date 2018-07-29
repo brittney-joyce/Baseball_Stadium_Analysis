@@ -1,0 +1,3 @@
+# Conceal server login credentials
+
+**/config.py
