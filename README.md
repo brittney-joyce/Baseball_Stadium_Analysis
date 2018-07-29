@@ -15,7 +15,7 @@ To find out why baseball is on the decline and what factors affect attendance th
     * MySQL
     ** Data cleaning / munging
     * Data conversion and translation tables
-### Data Visualization / Dashboards - Brittany & Elliott
+### Data Visualization / Dashboards - Brittney & Elliott
     * Leaflet JS
     * Plotly
     * Matplotlib
@@ -30,3 +30,10 @@ To find out why baseball is on the decline and what factors affect attendance th
         * Promotions
         * Oppenent
         * Key player acquisition 
+        
+## Find us on LinkedIn!
+Alex-
+Brittney-
+Daniel-
+Elliot-
+Roger-
