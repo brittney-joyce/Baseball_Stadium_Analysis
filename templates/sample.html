@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+
+<style>
+body::before {
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  z-index: -1;
+  display: block;
+  width: 400px;
+  height: 300px;
+  content: " ";
+  background-image: url("js/Images/mlb.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: cover;
+  opacity: 0.3;
+}
+body {
+    font: 11px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+h1 {
+		text-align: center;
+		}
+
+		h2 {
+		text-align: left;
+		}	
+</style>
+<body>
+
+<p><span><label for="y-axis">Select Y Input</label></span>
+<select id="y-value">
+  <option value="Attendance_2017">2017 Attenedance</option>
+  <option value="Attendance_2016">2016 Attenedance</option>
+  <option value="Attendance_2015">2015 Attenedance</option>
+  <option value="Attendance_2014">2014 Attenedance</option>
+  <option value="Attendance_2013">2013 Attenedance</option>
+</select>
+<p><span><label for="x-axis">Select X Input</label></span>
+<select id="x-value">
+    <option value="Operating_Income_2017">2017 Operating Income</option>
+    <option value="Operating_Income_2016">2016 Operating Income</option>
+    <option value="Operating_Income_2015">2015 Operating Income</option>
+    <option value="Operating_Income_2014">2014 Operating Income</option>
+    <option value="Operating_Income_2013">2013 Operating Income</option>
+    <option value="Payroll_2017">2017 Payroll</option>
+    <option value="Payroll_2016">2016 Payroll</option>
+    <option value="Payroll_2015">2015 Payroll</option>
+    <option value="Payroll_2014">2014 Payroll</option>
+    <option value="Payroll_2013">2013 Payroll</option>
+    <option value="Revenue_2017">2017 Revenue</option>
+    <option value="Revenue_2016">2016 Revenue</option>
+    <option value="Revenue_2015">2015 Revenue</option>
+    <option value="Revenue_2014">2014 Revenue</option>
+    <option value="Revenue_2013">2013 Revenue</option>
+    <option value="Wins_2017">2017 Total Wins</option>
+    <option value="Wins_2016">2016 Total Wins</option>
+    <option value="Wins_2015">2015 Total Wins</option>
+    <option value="Wins_2014">2014 Total Wins</option>
+    <option value="Wins_2013">2013 Total Wins</option>
+
+</select>
+
+<button onclick="setGraph()">submit</button>
+<br> <strong>*Note For accurate correlations, make sure Y input year equals X Input year </strong>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<script>
+
+function drawGraph(xText, yText) {
+	$('svg').remove();
+	var margin = {top: 20, right: 20, bottom: 30, left: 60},
+		width = 960 - margin.left - margin.right,
+		height = 500 - margin.top - margin.bottom;
+
+	// setup x 
+	var xValue = function(d) { return d[xText];}, // data -> value
+		xScale = d3.scale.linear().range([0, width]), // value -> display
+		xMap = function(d) { return xScale(xValue(d));}, // data -> display
+		xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+
+	// setup y
+	var yValue = function(d) { return d[yText];}, // data -> value
+		yScale = d3.scale.linear().range([height, 0]), // value -> display
+		yMap = function(d) { return yScale(yValue(d));}, // data -> display
+		yAxis = d3.svg.axis().scale(yScale).orient("left");
+
+	// setup fill color
+	var cValue = function(d) { return d.Conf;},
+		color = d3.scale.category20();
+
+	// add the graph canvas to the body of the webpage
+	var svg = d3.select("body").append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	  .append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	// add the tooltip area to the webpage
+	var tooltip = d3.select("body").append("div")
+		.attr("class", "tooltip")
+		.style("opacity", 0);
+
+	// load data
+	d3.csv("js/Team_Data.csv", function(error, data) {
+
+	  // change string (from CSV) into number format
+	  data.forEach(function(d) {
+		d[yText] = +d[yText];
+		d[xText] = +d[xText];
+	
+	  });
+
+	  // don't want dots overlapping axis, so add in buffer to data domain
+	  xScale.domain([d3.min(data, xValue)-1, d3.max(data, xValue)+1]);
+	  yScale.domain([d3.min(data, yValue)-1, d3.max(data, yValue)+1]);
+
+	
+	  // x-axis
+	  svg.append("g")
+		  .attr("class", "x axis")
+		  .attr("transform", "translate(0," + height + ")")
+		  .call(xAxis)
+		.append("text")
+		  .attr("class", "label")
+		  .attr("x", width)
+		  .attr("y", -6)
+		  .style("text-anchor", "end")
+		  .text(xText);
+
+	  // y-axis
+	  svg.append("g")
+		  .attr("class", "y axis")
+		  .call(yAxis)
+		.append("text")
+		  .attr("class", "label")
+		  .attr("transform", "rotate(-90)")
+		  .attr("y", 6)
+		  .attr("dy", ".71em")
+		  .style("text-anchor", "end")
+		  .text(yText);
+
+	  // draw dots
+	  svg.selectAll(".dot")
+		  .data(data)
+		.enter().append("circle")
+		  .attr("class", "dot")
+		  .attr("r", 5)
+		  .attr("cx", xMap)
+		  .attr("cy", yMap)
+		  .style("fill", function(d) { return color(cValue(d));}) 
+		  .on("mouseover", function(d) {
+			  tooltip.transition()
+				   .duration(200)
+				   .style("opacity", .9);
+			  tooltip.html(d["Team"] + "<br/> " + d.Abbr + "<br/>(" + xValue(d) 
+				+ ", " + yValue(d) + ")")
+				   .style("left", (d3.event.pageX + 10) + "px")
+				   .style("top", (d3.event.pageY - 28) + "px");
+		  })
+		  .on("mouseout", function(d) {
+			  tooltip.transition()
+				   .duration(500)
+				   .style("opacity", 0);
+		  });
+
+	  
+	});
+}
+
+drawGraph('2017 Operating Income', '2017 Attendance');
+
+function setGraph() {
+	drawGraph($('#x-value').val(), $('#y-value').val());
+}
+</script>
+</body>
+</html>

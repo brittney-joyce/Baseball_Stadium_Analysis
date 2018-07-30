@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Attendance vs Financials & Performance</title>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html{
+            height: 100%;
+            margin: 0;
+        }
+        
+        .bg {
+            /* The image used */
+            background-image: url("images/stadium.jpg");
+        
+            /* Full height */
+            height: 100%; 
+        
+            /* Center and scale the image nicely */
+            background-position: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    </head>
+  <body style= background-image:url("images/stadium.jpg") position = absolute height: 100% width: 100% background-position: center background-repeat: no-repeat background-size: cover;>
+    <div class = "bg"><div></div>
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- Create Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand bg-primary text-white m-2 pl-2 pr-2" href="{{ url_for('home')}}">Home</a>
+        <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Create collapse bar -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav justify-content-end nav-pills nav-fills">
+          <!-- Create dropdown menu -->
+              <li class="nav-item justify-content-end">
+                <a class="ml-5 mr-2 nav-link active text-white" href="{{ url_for('summary')}}">Machine Learning</a>
+              </li>
+              <li class="nav-item">
+                <a class="ml-2 nav-link active text-white" href="{{ url_for('detail')}}">Exploratory Data</a>
+              </li>
+           </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Content Area -->
+    <div class="container-fluid">
+      <div class="row mt-5 ml-5 mr-5 mb-5">
+        <div class="col-lg-12 mb-6">
+          <div class="thumbnail">
+            <hr>
+            <!--summary needs to be updated -->
+            <h1 class ="text-yellow pt-4" style = color:yellow;>MLB Team Attendance vs Key Financials and Performance </h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>   
+        <div class="panel panel-default">
+            <div class="panel-body">
+                
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="embed-responsive embed-responsive-16by9" style="background-color: white">
+                            <iframe class="embed-responsive-item" src = "sample.html"></iframe>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+  </body>
+  <br>
+  <!--Footer-->
+  </html>

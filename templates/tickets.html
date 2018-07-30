@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Predicting MLB Attendance</title>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="js/css/reset.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/css/style2.css">
+    <style>
+        body, html{
+            height: 100%;
+            margin: 0;
+        }
+        
+        .bg {
+            /* The image used */
+            background-image: url("js/Images/stadium.jpg");
+        
+            /* Full height */
+            height: 100%; 
+        
+            /* Center and scale the image nicely */
+            background-position: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    </head>
+  <body style= background-image:url("js/Images/stadium.jpg") position = absolute height: 100% width: 100% background-position: center background-repeat: no-repeat background-size: cover;>
+    <div class = "bg"><div></div>
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- Create Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand bg-primary text-white m-2 pl-2 pr-2" href="index.html">Home</a>
+        <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Create collapse bar -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav justify-content-end nav-pills nav-fills">
+          <!-- Create dropdown menu -->
+          <li class="nav-item justify-content-end">
+            <a class="ml-5 mr-2 nav-link active text-white" href= "regression.html">Machine Learning</a>
+          </li>
+          <li class="nav-item">
+            <a class="ml-2 nav-link active text-white" href="forest.html">Random forest</a>
+          </li>
+          <li class="nav-item">
+            <a class="ml-2 nav-link active text-white" href="tickets.html">Ticket Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="ml-2 nav-link active text-white" href="attendance.html">MLB Attendance</a>
+          </li>
+        </div>
+      </div>
+    </nav>
+        <!-- Main Content Area -->
+        <div class="container-fluid">
+                <div class="row mt-5 ml-5 mr-5 mb-5">
+                  <div class="col-lg-12 mb-6" style="background-color: blue,#b2e6ff;">
+                    <div class="thumbnail">
+                      <h1 style = "color:yellow;">Ticket Prices</h1>
+                      <hr>
+                      <!--summary needs to be updated -->
+                      <center><br>
+                      <h4>Let's take a dive into ticketing pricing across the MLB</h4>
+                      
+                      </center>
+                      <div class="row">
+                      <div class="col-md-5 text-center ml-1">
+                      </div>
+                      <div class="col-md-5 text-center ml-1">
+                      </div>
+                      <div class="col-md-5 text-center ml-1">
+                        <iframe id="s-chart" class="embed-responsive-item" style = "height: 500px; width: 700px; opacity: .95;" src="priceVSattendance.html"></iframe>
+                        <ul>
+                          <li> Input additional info here </li>
+                          
+                        </ul>
+                      </div>
+                      <div class="col-md-5 text-center ml-1">
+                        <iframe id="s-chart" class="embed-responsive-item" style = "height: 500px; width: 650px; opacity: .95;" src="dodgersVSMLB.html"></iframe>
+                        <ul>
+                          <li>Input additional info here
+                          </li>
+                        </ul>
+                      </div>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </body>
+            <br>
+
+  </html>
