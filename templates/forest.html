@@ -51,10 +51,10 @@
             <ul class="nav justify-content-end nav-pills nav-fills">
           <!-- Create dropdown menu -->
           <li class="nav-item justify-content-end">
-            <a class="ml-5 mr-2 nav-link active text-white" href= "regression.html">Machine Learning</a>
+            <a class="ml-5 mr-2 nav-link active text-white" href= "regression.html">Linear Regression Model</a>
           </li>
           <li class="nav-item">
-            <a class="ml-2 nav-link active text-white" href="forest.html">Random forest</a>
+            <a class="ml-2 nav-link active text-white" href="forest.html">Random Forest Model</a>
           </li>
           <li class="nav-item">
             <a class="ml-2 nav-link active text-white" href="tickets.html">Ticket Pricing</a>
@@ -72,15 +72,35 @@
           <div class="thumbnail">
             <hr>
             <!--summary needs to be updated -->
-            <center>
-            <h1 class ="text-yellow pt-4" style = color:yellow;>Predicting MLB Attendance </h1>
+            <center><br><br>
+            <h1 class ="text-yellow pt-4" style = color:yellow;>Predicting MLB Attendance - Random Forest Model </h1>
             </center>
             <div class ="transbox" style ="color: yellow;">
-                <p> Before we did further analysis, we needed to explored the data. Here are some plots to show what data looked like. 
+                <p> <img src="js/Images/PieChart_FeatureImportances.png" style="margin:auto; float: right; height: 450px; width:auto;display:block" />
+                  Before we did further analysis, we needed to explored the data. Here are some plots to show what data looked like. 
                     Once we got understood the data and what it was representing, we mathematically analyzed it. How possible was it to run predictive analysis? 
                     Our team decided to use the machine learninig approach with various algorithms (advised Random forest regressor).  
                     The purpose of our model was to predict attendance and the importance of each factor that would be weighed in by our algorithm.
-            </p>
+                    
+                    <br><br>RandomForests for Attendance: <br>
+                    After adding week vs weekend, win percentage, and month into the model as features, the model fit score improved from .08 to .38. 
+                    While the additional data did improve the model, our model still doesn't fit the data extremely well. It does suggest that Win percentage, temperature, and opponent are high factor.
+                    <br><br>Overview: <br>
+                    In addition to looking at the feature importance scores for our model features, Tableau was used to visualize  single effects of our model features.
+                    <br>
+                    <br>
+                    <br>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                  </p>
             </div>
         </div>
         <div class="panel panel-default">

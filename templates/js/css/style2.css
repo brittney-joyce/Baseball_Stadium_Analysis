@@ -65,7 +65,7 @@ div.transbox {
     margin: 30px;
     background-color: #ffffff;
     border: 2px solid yellow;
-    opacity: 0.75;
+    opacity: 0.85;
     filter: alpha(opacity=60); 
 }
 
