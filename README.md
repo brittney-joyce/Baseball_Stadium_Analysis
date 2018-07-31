@@ -32,8 +32,8 @@ To find out why baseball is on the decline and what factors affect attendance th
         * Key player acquisition 
         
 ## Find us on LinkedIn!
-*Alex- www.linkedin.com/in/alex-matthiessen
-*Brittney-https://www.linkedin.com/in/brittney-magsino-b0588216/
-*Daniel- https://www.linkedin.com/in/danielohriner/
-*Elliot- www.linkedin.com/in/elliott-jackson-5224045a
-*Roger- https://www.linkedin.com/in/roger-tran-80a2091a/
+* Alex- www.linkedin.com/in/alex-matthiessen
+* Brittney-https://www.linkedin.com/in/brittney-magsino-b0588216/
+* Daniel- https://www.linkedin.com/in/danielohriner/
+* Elliot- www.linkedin.com/in/elliott-jackson-5224045a
+* Roger- https://www.linkedin.com/in/roger-tran-80a2091a/
