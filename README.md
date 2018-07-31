@@ -4,9 +4,9 @@
 ## Baseball Decline Stats:
 * MLB attendance is at its lowest in 15 years
 * League wide attendance is down 6.5%
-* Attendance is down -1,918 people per game on average
-* Attendancce decline costs the leage an estimate of $355 million on ticket sales alone
-* There has been 37 game postponements this year alone due to weather
+* Attendance is down 1,918 people per game on average
+* Attendance decline costs the leage an estimate of $355 million on ticket sales alone
+* There have been 37 game postponements this year alone due to weather
 
 ## Purpose:
 To find out why baseball is on the decline and what factors affect attendance the most. This analysis will help us determine what strategies we can use to increase attendance while increasing revenue. 
@@ -20,16 +20,17 @@ To find out why baseball is on the decline and what factors affect attendance th
     * Plotly
     * Matplotlib
     * D3?
-### Linear Models - Alex and Daniel
-    Machine Learning
-    Linear Models Significance
-        * Day of the week
-        * Time of Day
-        * Record
-        * Win/Lose Streak
-        * Promotions
-        * Oppenent
-        * Key player acquisition 
+### Machine Learning Models - Alex (Linear Regression) and Daniel (Random Forest)
+    Model Features
+        * # Game of Season
+        * Opponnent
+        * Weekday or Weekend
+        * Month 
+        * Day or Night 
+        * Win Streak
+        * Promotions (Bobble Head)
+        * Temperature
+        * Win Percentage 
         
 ## Find us on LinkedIn!
 * Alex- www.linkedin.com/in/alex-matthiessen
