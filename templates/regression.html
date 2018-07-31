@@ -12,26 +12,72 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="js/css/style2.css">
     <style>
-        body, html{
-            height: 100%;
-            margin: 0;
-        }
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 14px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+body, html{
+    height: 100%;
+    margin: 0;
+}
         
-        .bg {
-            /* The image used */
-            background-image: url("js/Images/stadium.jpg");
+.bg {
+     /* The image used */
+    background-image: url("js/Images/stadium.jpg");
         
-            /* Full height */
-            height: 100%; 
+    /* Full height */
+    height: 100%; 
         
-            /* Center and scale the image nicely */
-            background-position: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
-    </head>
-  <body style= background-image:url("js/Images/stadium.jpg") position = absolute height: 100% width: 100% background-position: center background-repeat: no-repeat background-size: cover;>
+    /* Center and scale the image nicely */
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+</div>
+<body style= background-image:url("js/Images/stadium.jpg") position = absolute height: 100% width: 100% background-position: center background-repeat: no-repeat background-size: cover;>
     <div class = "bg"><div></div>
     <!-- jQuery library -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -51,6 +97,9 @@
             <ul class="nav justify-content-end nav-pills nav-fills">
           <!-- Create dropdown menu -->
           <li class="nav-item justify-content-end">
+              <a class="ml-5 mr-2 nav-link active text-white" href= "index.html">Home</a> 
+          </li>
+          <li class="nav-item">
             <a class="ml-5 mr-2 nav-link active text-white" href= "regression.html">Machine Learning</a>
           </li>
           <li class="nav-item">
@@ -66,7 +115,8 @@
       </div>
     </nav>
         <!-- Main Content Area -->
-        <div class="container-fluid">
+        
+        <div class="main">
             <div class="row mt-5 ml-5 mr-5 mb-5">
                 <div class="col-lg-12 mb-6" style="background-color: blue,#b2e6ff;">
                     <div class="thumbnail">
@@ -75,6 +125,47 @@
                     <!--summary needs to be updated -->
                     <center><br>
                     <h4>Let's take a dive into our model's predictions</h4>
+                    <div class="sidenav">
+                      <h5>Linear Regression Coefficients</h5>
+                        <a>Is_Weekend : 3712.56737064</a>
+                        <a>Month : -61.5984230076</a>
+                        <a>Win_Per : 12359.7448174</a>
+                        <a>Bobble_head : 4810.81731789</a>
+                        <a>Precip : -626.129123271</a>
+                        <a>Temp : 117.733178947</a>
+                        <a>Seasons : 1114.16874054</a>
+                        <h6>Opponents</h6>
+                        <a>SDP : 165.458703284</a>
+                        <a>ARI : -2058.00438194</a>
+                        <a>COL : -303.433539781</a>
+                        <a>PHI : 799.298323809</a>
+                        <a>SFG : 2125.42264038</a>
+                        <a>PIT : -1211.43327795</a>
+                        <a>MIA : -1859.19725743</a>
+                        <a>STL : -1476.31002404</a>
+                        <a>CHC : -181.453257666</a>
+                        <a>WSN : -1329.94444322</a>
+                        <a>CIN : -481.789695834</a>
+                        <a>NYM : 975.15667838</a>
+                        <a>LAA : 4305.11202544</a>
+                        <a>KCR : -6443.37075335</a>
+                        <a>ATL : -1694.06069305</a>
+                        <a>MIN : -3049.85940241</a>
+                        <a>CHW : 1002.28346186</a>
+                        <a>MIL : -722.182748732</a>
+                        <a>BAL : 711.508217501</a>
+                        <a>TBR : 3027.9173923</a>
+                        <a>BOS : 3249.75120863</a>
+                        <a>SEA : 353.974832887</a>
+                        <a>TEX : -842.097614911</a>
+                        <a>OAK : 2535.08019006</a>
+                        <a>DET : -1459.90224817</a>
+                        <a>CLE : 4146.50688845</a>
+                        <a>NYY : 11976.4706086</a>
+                        <a>HOU : -4218.62164436</a>
+                        <a>FLA : -8042.28018871</a>
+
+                      </div>
                     <div class="responsive">
                             <div class="gallery">
                               <a target="_blank" href="js/Images/overall_performance.jpeg">
@@ -83,8 +174,6 @@
                               <div class="desc">Overall Linear Regression Performance</div>
                             </div>
                           </div>
-                          
-                          
                           <div class="responsive">
                             <div class="gallery">
                               <a target="_blank" href="js/Images/year_performance.jpeg">
@@ -123,11 +212,11 @@
 
                           <div class="clearfix"></div>
                           
-                          <div style="padding:6px;">
-                            <p>Additional Info</p>
+                          
                           </div>
                           
                           </body>
                    
 
   </html>
+
