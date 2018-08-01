@@ -5,7 +5,7 @@
 * MLB attendance is at its lowest in 15 years
 * League wide attendance is down 6.5%
 * Attendance is down 1,918 people per game on average
-* Attendance decline costs the leage an estimate of $355 million on ticket sales alone
+* Attendance decline costs the league an estimate of $355 million on ticket sales alone
 * There have been 37 game postponements this year alone due to weather
 
 ## Purpose:
@@ -23,7 +23,7 @@ To find out why baseball is on the decline and what factors affect attendance th
 ### Machine Learning Models - Alex (Linear Regression) and Daniel (Random Forest)
     Model Features
         * # Game of Season
-        * Opponnent
+        * Opponent
         * Weekday or Weekend
         * Month 
         * Day or Night 
